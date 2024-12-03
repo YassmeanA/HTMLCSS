@@ -40,7 +40,7 @@ top:500px;
 display:flex;
 justify-content:center;
 align-items:center;
-color:rgba(0,0,0,0.3);
+color:rgba(0,0,0,0.5);
 box-shadow:1px 4.5px 12px currentcolor;
 opacity:20%;
 border-radius:20px;
@@ -347,7 +347,7 @@ background:rgba(252,252,252,0.0);
 border:1px solid rgba(252,252,252,0.5);
 transition:0.3s ease-out;}
 
-.TEXT{
+.TEXT, .T{
 position:absolute;
 color:rgba(252,252,252,0.7);
 font-weight:300;
@@ -573,7 +573,7 @@ height:100vh;}
 <div class="item Y">
 
 <div class="item X">
-<span class="TEXT">First Name</span>
+<span class="T">First Name</span>
 <div class="section">
 <form class="Input">
 <input type="text"/>
@@ -583,7 +583,7 @@ height:100vh;}
 </div>
 
 <div class="item X">
-<span class="TEXT">Last Name</span>
+<span class="T">Last Name</span>
 <div class="section">
 <form class="Input">
 <input type="text"/>
@@ -595,7 +595,7 @@ height:100vh;}
 </div>
 
 <div class="item Y">
-<span class="TEXT">Email</span>
+<span class="T">Email</span>
 <div class="section">
 <form class="Input">
 <input type="text"/>
@@ -605,7 +605,7 @@ height:100vh;}
 </div>
 
 <div class="item Y">
-<span class="TEXT">Mobile Number</span>
+<span class="T">Mobile Number</span>
 <div class="section">
 <form class="Input">
 <input type="text"/>
@@ -617,7 +617,7 @@ height:100vh;}
 <div class="item Y">
 
 <div class="item X">
-<span class="TEXT">Country</span>
+<span class="T">Country</span>
 <div class="section">
 <form class="Input">
 <input type="text"/>
@@ -627,7 +627,7 @@ height:100vh;}
 </div>
 
 <div class="item X">
-<span class="TEXT">City</span>
+<span class="T">City</span>
 <div class="section">
 <form class="Input">
 <input type="text"/>
@@ -661,6 +661,8 @@ height:100vh;}
 const Items = document.querySelectorAll(".item.A");
 const Frames = document.querySelectorAll(".frame.A");
 const FRs = document.querySelectorAll(".frame.S");
+const texts = document.querySelectorAll(".TEXT");
+const inputs = document.querySelectorAll("input");
 
 Ham.addEventListener("click",() => {
 C.classList.add("active");
@@ -732,10 +734,15 @@ TEXT.style.display="none";});
 C.addEventListener("click", () => {
 Input.reset();});
 
+inputs.forEach((input,index) => {
+input.addEventListener("click", () => {
+texts[index - 1].style.display="none";});});
+
 Frames.forEach(Frame => {
 Frame.addEventListener("click", () => {
 TEXT.style.display="flex";
-Input.reset();});});
+Input.reset();
+});});
 
 </script>
 
