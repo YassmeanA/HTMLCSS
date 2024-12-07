@@ -22,8 +22,9 @@ background-size:cover;
 margin:0;
 display:flex;
 justify-content:center;
-width: 980px;
+width: 880px;
 transform:scale(0.8);
+overflow-x: hidden;
 margin-left:80px;
 margin-top:50px;
 height: 750px;}
@@ -83,7 +84,7 @@ transition:0.3s ease-out;}
 .frame.S{
 z-index:1;
 display:flex;
-left:440px;
+left:400px;
 box-shadow:5px 5px 15px rgba(0,0,0,0.2);
 background:var(--Background);}
 
@@ -131,7 +132,7 @@ user-select:none;
 z-index:0;
 position: absolute;
 top:50px;
-left:100px;
+left:70px;
 height:700px;
 width:250px;
 overflow-x: hidden;
@@ -398,7 +399,7 @@ z-index:0;
 position: absolute;
 border-radius: 10px;
 top:50px;
-left:880px;
+left:830px;
 height:700px;
 width:70px;
 overflow-x: hidden;
@@ -503,11 +504,20 @@ transition:0.3s ease-out;}
 .item2.active .svg2, .item2.active .icon2, .item2.active .span2{
 opacity:1;}
 
+.Glass{
+position: absolute;
+top: -180px;
+left:-250px;
+width:200vw;
+height: 1022px;
+overflow: hidden;}
+
 .glass{
 position: absolute;
-left:0;
-width:100vw;
-height:100vw;
+top: 100px;
+left:100px;
+width:120vw;
+height:120vw;
 border-radius:50%;
 background:rgba(252,252,252,0.5);
 backdrop-filter:blur(20px);
@@ -517,7 +527,9 @@ border:solid 2px rgba(252,252,252,0.55);}
 </head>
 <body>
 
+<div class="Glass">
 <div class="glass"></div>
+</div>
 
 <div id="C" class="container">
 
