@@ -17,14 +17,16 @@
 
 body{
 background:var(--primary);
-background-image:url("B1.jpg");
+background-image:url("Glass10.svg");
 background-size:cover;
 margin:0;
 display:flex;
 justify-content:center;
-overflow-x: hidden;
-height: 800px;
-overflow-y: auto;}
+width: 980px;
+transform:scale(0.8);
+margin-left:80px;
+margin-top:50px;
+height: 750px;}
 
 *{
 margin:0;
@@ -62,8 +64,7 @@ height:700px;}
 height:500px;}
 
 span {
-font-size: 0.8rem;
-}
+font-size: 0.8rem;}
 
 .frame{
 z-index:-1;
@@ -391,7 +392,6 @@ flex-direction:column;}
 50%{transform:scale(1); opacity:1;}
 100%{transform:scale(0.6); opacity:0;}}
 
-
 .container2{
 user-select:none;
 z-index:0;
@@ -503,11 +503,21 @@ transition:0.3s ease-out;}
 .item2.active .svg2, .item2.active .icon2, .item2.active .span2{
 opacity:1;}
 
+.glass{
+position: absolute;
+left:0;
+width:100vw;
+height:100vw;
+border-radius:50%;
+background:rgba(252,252,252,0.5);
+backdrop-filter:blur(20px);
+border:solid 2px rgba(252,252,252,0.55);}
 
 </style>
 </head>
 <body>
 
+<div class="glass"></div>
 
 <div id="C" class="container">
 
