@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسهيل العملية التعليمية</title>
+    
+    
+    <style>
+    /* تنسيق الصفحة بشكل عام */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e0a47; /* خلفية داكنة تعكس طابع الـ Galaxy */
+    color: white; /* النص يكون باللون الأبيض ليتناسب مع الخلفية */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+html{
+-webkit-tap-highlight-color: transparent;
+scroll-behavior:smooth;}
+
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* خلفية شبه شفافة */
+    border-radius:0 0 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #a4a7d1; /* لون أفتح من البنفسجي للعنوان */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #7a5cdb;
+    border-radius: 4px;
+    background-color: #2e1b63; /* خلفية داكنة للحقل */
+    color: white;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #7a5cdb; /* نفس اللون البنفسجي */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #9b73e7; /* لون أفتح عند المرور على الزر */
+}
+
+#youtube-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#results-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#results-list div {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2); /* خلفية شفافة */
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#results-list img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+button:active {
+    background-color: #4e3991; /* لون أغمق عند النقر */
+}
+
+/* إضافة التنسيق للأزرار بجانب بعضها */
+#youtube-search button, #text-to-speech button, #chatgpt button {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* لتنسيق الأزرار التي تكون بجانب بعضها بشكل أفقي */
+button {
+    display: inline-flex; /* يمكن وضع الأزرار بجانب بعضها */
+    justify-content: center;
+    align-items: center;
+}
+
+#youtube-search div, #text-to-speech div, #chatgpt div {
+    display: flex;
+    justify-content: center; /* وضع الأزرار في المنتصف */
+    align-items: center; /* محاذاة الأزرار عمودياً */
+}
+
+/* تنسيق الأزرار على الواجهة الرئيسية ليكونوا بجانب بعضهم */
+#buttons-container {
+    display: flex;
+    justify-content: center; /* توسيط الأزرار في المنتصف */
+    align-items: center;
+    gap: 20px; /* المسافة بين الأزرار */
+}
+
+#buttons-container button {
+    margin: 0;
+}
+
+/* تنسيق الأيقونات بجانب النص في الأزرار */
+button i {
+    margin-right: 8px; /* إضافة مساحة بين الأيقونة والنص */
+}
+    
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0e124a;
+            color: #fff;
+            
+        }
+
+        
+        .hero {
+            display: flex
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            background: linear-gradient(135deg, #5a00e0, #ff007a);
+              color: #fff;
+            clip-path: ellipse(100% 80% at 50% 20%);
+            height: 60vh;}
+
+
+
+        .hero h1 {
+text-align:right;
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+
+        .hero p {
+text-align:right;
+            font-size: 1rem;
+            margin-bottom: 70px;
+        }
+
+     .hero   .cta {
+background:none;
+            color:white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s ease-in-out;
+                
+border:1.5px solid white;  }
+
+        .hero .cta:hover {
+            background:white ;
+            color:#ff007a ;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff007a;
+        }
+
+        .features {
+            background:#0e124a;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: right;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .features p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
+        .features .cards {
+text-align: right;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .features .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            text-align: right;
+            transition: 0.3s;
+        }
+
+        .features .card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .features .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .features .card p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <section class="hero">
+
+        <h1>اكتشف طرقًا مبتكرة لدعم التعليم لطلاب الفئات الخاصة</h1>
+        <p>نوفر أدوات وتقنيات تساعد في تحسين تجربة التعليم وجعلها أكثر شمولية وملاءمة لاحتياجات الجميع</p>
+          <a href="#features" class="cta">ابدأ الآن</a>
+
+ </section>
+
+    <section id="features" class="features">
+        <h2>الميزات</h2>
+        <p>تعرف على الحلول التي نقدمها لتحسين تجربة التعليم لطلاب الفئات الخاصة</p>
+        <div  class="cards">
+            <div Onclick="setTimeout(()=>{window.location.href='Index1.html';},300);" class="card">
+                <h3>أدوات تفاعلية</h3>
+                <p>نوفر أدوات تفاعلية تجعل عملية التعلم ممتعة وسهلة</p>
+      
+ </div>
+            <div Onclick="setTimeout(()=>{window.location.href='Activity2.html';},300);"class="card">
+                <h3>موارد تعليمية مخصصة</h3>
+                <p>مصادر تعليمية مصممة خصيصاً لتلبية احتياجات الطلاب</p>
+           
+ </div>
+            <div Onclick="setTimeout(()=>{window.location.href='Activity3.html';},300);"class="card">
+                <h3>دعم شامل</h3>
+                <p>نقدم دعمًا مستمرًا للمعلمين والطلاب لتحقيق أفضل النتائج</p>
+            </div>
+        </div>
+    </section>
+        
+
+<script>
+
+    // وظيفة البحث في YouTube باستخدام API
+async function searchYouTube() {
+    const query = document.getElementById('youtube-query').value;
+    if (query.trim() === '') {
+        alert('يرجى إدخال نص للبحث');
+        return;
+    }
+
+    const apiKey = 'AIzaSyBZE6ZW4MGjJfTbHMXXORitIRjrI5FwAXU'; // استبدل بـ API Key الخاص بك
+    const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&key=${apiKey}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        // عرض النتائج في الصفحة
+        const resultsContainer = document.getElementById('results-list');
+        resultsContainer.innerHTML = ''; // مسح النتائج السابقة
+
+        if (data.items && data.items.length > 0) {
+            data.items.forEach(item => {
+                const videoTitle = item.snippet.title;
+                const videoUrl = `https://www.youtube.com/watch?v=${item.id.videoId}`;
+                const videoThumbnail = item.snippet.thumbnails.high.url;
+
+                const videoElement = document.createElement('div');
+                videoElement.innerHTML = `
+                    <a href="${videoUrl}" target="_blank">
+                        <img src="${videoThumbnail}" alt="${videoTitle}" />
+                        <p>${videoTitle}</p>
+                    </a>
+                `;
+                resultsContainer.appendChild(videoElement);
+            });
+        } else {
+            resultsContainer.innerHTML = '<p>لم يتم العثور على نتائج.</p>';
+        }
+    } catch (error) {
+        console.error('حدث خطأ أثناء البحث:', error);
+        alert('حدث خطأ أثناء البحث. حاول مرة أخرى لاحقاً.');
+    }
+}
+
+// وظيفة تحويل النص إلى صوت
+function convertToSpeech() {
+    const text = document.getElementById('text-to-speech').value;
+    if (text.trim() === '') {
+        alert('يرجى إدخال نص لتحويله إلى صوت');
+        return;
+    }
+    const speech = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(speech);
+}
+
+// وظيفة إرسال سؤال إلى ChatGPT
+async function askChatGPT() {
+    const userQuestion = document.getElementById('user-question').value;
+    const responseDiv = document.getElementById('chatgpt-response');
+
+    if (userQuestion.trim() === '') {
+        alert("يرجى إدخال سؤال!");
+        return;
+    }
+
+    const apiKey = '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';  // استبدل بـ API Key الخاص بك
+    const apiUrl = 'https://api.openai.com/v1/chat/completions';
+
+    const requestBody = {
+        model: "gpt-3.5-turbo",
+        prompt: userQuestion,
+        max_tokens: 100
+    };
+
+    const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${apiKey}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestBody)
+    });
+
+    const data = await response.json();
+    responseDiv.textContent = data.choices[0].text;
+
+    document.getElementById("send-button").addEventListener("click", async () => {
+        const userInput = document.getElementById("user-input").value;
+        const responseContainer = document.getElementById("response-container");
+    
+        // إذا كان الحقل فارغًا
+        if (!userInput.trim()) {
+            responseContainer.textContent = "يرجى إدخال نص!";
+            return;
+        }
+    
+        // مفتاح API الخاص بك
+        const API_KEY = "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"; // ضع مفتاح API الخاص بك هنا
+    
+        // إعداد الطلب
+        const url = "https://api.openai.com/v1/chat/completions";
+        const headers = {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${API_KEY}`,
+        };
+        const data = {
+            model: "gpt-4", // أو gpt-3.5-turbo
+            messages: [
+                { role: "system", content: "You are a helpful assistant." },
+                { role: "user", content: userInput },
+            ],
+            max_tokens: 100,
+            temperature: 0.7,
+        };
+    
+        // إرسال الطلب
+        responseContainer.textContent = "جارٍ المعالجة...";
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify(data),
+            });
+            const result = await response.json();
+            if (response.ok) {
+                responseContainer.textContent = result.choices[0].message.content;
+            } else {
+                responseContainer.textContent = `خطأ: ${result.error.message}`;
+            }
+        } catch (error) {
+            responseContainer.textContent = "حدث خطأ أثناء الاتصال بالخادم.";
+            console.error(error);
+        }
+    });
+
+}
+
+</script>
+</body>
+</html>
+
